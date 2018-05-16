@@ -1,0 +1,37 @@
+//
+//  FWC.pch
+//  TTFWC
+//
+//  Created by 胡高广 on 2018/5/14.
+//  Copyright © 2018年 吕松松. All rights reserved.
+//
+
+#ifndef FWC_pch
+#define FWC_pch
+#import "TCCreatePlist.h"
+#import <objc/runtime.h>
+
+//Color
+#define TCUIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue &0xFF00) >>8))/255.0 blue:((float)(rgbValue &0xFF))/255.0 alpha:1.0]
+//屏幕实际的宽高度
+#define WIDTH  [[UIScreen mainScreen] bounds].size.width //宽度
+#define HEIGHT  [[UIScreen mainScreen] bounds].size.height //高度
+//比例
+#define WIDHTSCALE  [UIScreen mainScreen].bounds.size.width/375.0
+#define HEIGHTSCALE  [UIScreen mainScreen].bounds.size.height/667.0
+// Status bar & navigation bar height.
+//适配iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define  StatusBarAndNavigationBarHeight  (iPhoneX ? 88.f : 64.f)
+// Tabbar safe bottom margin.
+#define  TabbarSafeBottomMargin         (iPhoneX ? 34.f : 0.f)
+//友盟统计
+#define UMengTj @"5af8ee3cf29d980e0f000119"
+//百度统计
+#define BaiDuTjAPPKey @"6dc71f20ab"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* FWC_pch */
