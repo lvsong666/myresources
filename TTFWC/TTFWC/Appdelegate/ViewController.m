@@ -53,7 +53,7 @@
     UIBarButtonItem *nagetiveSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     nagetiveSpacer.width = -20;//这个值可以根据自己需要自己调整
     
-    self.navigationItem.leftBarButtonItems = @[nagetiveSpacer, barLeftBtn];
+//    self.navigationItem.leftBarButtonItems = @[nagetiveSpacer, barLeftBtn];
 }
 
 //创建中间视图
